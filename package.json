@@ -1,0 +1,19 @@
+{
+  "name": "findme",
+  "version": "1.0.0",
+  "description": " Web-site works as a unifier of two people, ones who need it, and ones who colud help with someones problem in hot spots",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Anna-Kozhel/FindMe.git"
+  },
+  "author": "Anna-Kozhel",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Anna-Kozhel/FindMe/issues"
+  },
+  "homepage": "https://github.com/Anna-Kozhel/FindMe#readme"
+}
