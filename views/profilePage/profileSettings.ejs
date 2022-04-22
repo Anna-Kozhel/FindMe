@@ -1,0 +1,26 @@
+<header>
+    <nav class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid" >
+            <a href = "#"><img src="/views/usedIcons/notificationNo.png" class="iconControl" alt="bell"></a>
+            <div class = "menu">
+                <button class="click"><a href = "#"><img src="/views/usedIcons/setting.png" class="iconControl" alt="settings"></a></button>
+                <div class="list" >
+                    <button class="links">Редагувати ім'я або Прізвище</button>
+                    <button class="links">Редагувати номер телефону</button>
+                    <button class="links">Редагувати пошту</button>
+                    <button class="links">Редагувати місцерозташування</button>
+                    <button class="links">Змінити пароль</button>
+                    <button class="links">Видалити акаунт</button>
+                    <button class="links">Вийти з акаунту</button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <script>
+        let click = document.querySelector('.click')
+        let list = document.querySelector('.list')
+        click.addEventListener("click",()=>{
+            list.classList.toggle('newlist');
+        })
+    </script>
+</header> 
