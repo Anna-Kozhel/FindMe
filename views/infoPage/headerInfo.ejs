@@ -1,0 +1,15 @@
+<header>
+    <nav class="navbar help navbar-expand-lg navbar-light">
+        <div class="container-fluid" >
+            <%- include('../settings.ejs') %>
+            <a href = "#" class="notification"><img src="/views/usedIcons/theme.png" class="iconControl" alt="bell"></a>
+        </div>
+    </nav>
+    <script>
+        let click_2 = document.querySelector('.click_2')
+        let list_2 = document.querySelector('.list_2')
+        click_2.addEventListener("click",()=>{
+            list_2.classList.toggle('newlist2');
+        })
+    </script>
+</header>
