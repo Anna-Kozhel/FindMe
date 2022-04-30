@@ -200,6 +200,10 @@ p{
 .help{
     height: 46.8px;
 }
+.form-floating>.form-control, .form-floating>.form-select {
+    height: calc(3.5rem);
+}
+
 
 
 .container::-webkit-scrollbar{

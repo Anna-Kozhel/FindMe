@@ -1,4 +1,4 @@
-<div class = "items">
+<form class = "items">
     <h1 style="color: white; font-size: 30px; text-align: center; margin-left: 0; margin-top: 10px; margin-right: 2%; display: inline;">
         Тип допомоги:
     </h1>
@@ -50,10 +50,13 @@
             Інше
         </label>
     </div>
-</div>
-<div class = "items">
+</form>
+<form class = "items">
     <h1 style="color: white; font-size: 30px; text-align: center; margin-left: 0; margin-top: 10px; margin-right: 2%; display: inline;">
         Конкретніше:
     </h1>
-    <input type="text" class="form-control" style="margin-top: 10px; background-color: rgba(255, 255, 255, 0.9);" placeholder="Що саме..." aria-label="description" aria-describedby="basic-addon1">
-</div>
+    <div class="form-floating" style="color: black; margin-top: 10px;">
+        <input type="text" class="form-control" id="floatingDescription" placeholder="description">
+        <label for="floatingDescription">Що саме...</label>
+    </div>
+</form>
