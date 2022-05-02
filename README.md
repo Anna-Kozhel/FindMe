@@ -1,1 +1,1 @@
-#[FindMe](https://github.com/Anna-Kozhel/FindMe.git)
+[FindMe](https://github.com/Anna-Kozhel/FindMe.git)
