@@ -1,81 +1,92 @@
-:root{
-    --color1:rgb(152,17,44);
-    --color2:rgb(234,233,229);
-    --color3:rgb(43, 40, 39);
-    --color4:rgb(207,66,90);
-    --color5:rgba(3,3,3,0.7);
+:root {
+    --color1: rgb(152, 17, 44);
+    --color2: rgb(234, 233, 229);
+    --color3: rgb(43, 40, 39);
+    --color4: rgb(207, 66, 90);
+    --color5: rgba(3, 3, 3, 0.7);
 }
-:root{
-    --color6:rgb(154,170,186);
-    --color7:rgb(234,233,229);
-    --color8:rgb(48,44,41);
-    --color9:rgb(196,212,225); 
-    --color10:rgb(157,152,146);
+
+:root {
+    --color6: rgb(154, 170, 186);
+    --color7: rgb(234, 233, 229);
+    --color8: rgb(48, 44, 41);
+    --color9: rgb(196, 212, 225);
+    --color10: rgb(157, 152, 146);
 }
 
 
-body{
+body {
     background-color: var(--color3);
 }
-.controlPanel{
-    position: fixed; 
+
+.controlPanel {
+    position: fixed;
     bottom: 0;
-    width: 100%; 
+    width: 100%;
     height: 8%;
-    background-color: rgba(43, 40, 39,0.6);
-    display: flex; 
-    align-items: center; 
+    background-color: rgba(43, 40, 39, 0.6);
+    display: flex;
+    align-items: center;
     justify-content: space-around;
 }
+
 .controlPanel .item {
-    flex: 1; 
+    flex: 1;
     display: flex;
-    align-items: center; 
+    align-items: center;
 }
-.controlPanel .item button{
+
+.controlPanel .item button {
     flex: 0.95;
     left: 2.5%;
-    border-radius: 0.9rem; 
+    border-radius: 0.9rem;
     padding: .6rem .75rem;
     background-color: var(--color1);
     border-color: var(--color1);
     margin-left: 4%;
 }
-.iconControl{
+
+.iconControl {
     filter: invert(100%);
-    -webkit-filter: invert(100%);  
+    -webkit-filter: invert(100%);
 }
-.profileCard{
-    background-color: var(--color1); 
-    width: 92%; 
-    height: 30%; 
+
+.profileCard {
+    background-color: var(--color1);
+    width: 92%;
+    height: 30%;
     position: absolute;
     top: 7%;
-    left:4%;
+    left: 4%;
     border-radius: 0.9rem;
 }
-.profileCard .profileInfo{
+
+.profileCard .profileInfo {
     min-width: 45%;
     max-width: 65%;
     height: 80%;
     position: absolute;
-    right: 5%; 
+    right: 5%;
     top: 10%
 }
-.profileCard .profileInfo p{
+
+.profileCard .profileInfo p {
     color: var(--color2);
 }
-.profileCard .profilePhoto{
+
+.profileCard .profilePhoto {
     height: 80%;
-    background-color:var(--color2);
+    background-color: var(--color2);
     position: absolute;
     left: 5%;
     top: 10%
 }
-.profileCard .profilePhoto img{
+
+.profileCard .profilePhoto img {
     width: auto;
     height: 100%;
 }
+
 .applicationCard {
     background-color: var(--color5);
     border-radius: 0.5rem;
@@ -85,7 +96,8 @@ body{
     height: 95%;
     color: var(--color2);
 }
-.applicationCardMain{
+
+.applicationCardMain {
     background-color: var(--color5);
     border-radius: 0.5rem;
     border-color: var(--color5);
@@ -99,54 +111,63 @@ body{
     padding: 2%;
 }
 
-.applicationHeader div{
+.applicationHeader div {
     height: 20%;
     min-width: 70%;
     text-align: left;
     color: var(--color4);
 }
-.applicationText p{
+
+.applicationText p {
     height: 20%;
     width: 100%;
     text-align: left;
 }
-.applicationText{
+
+.applicationText {
     height: 60%;
 }
-p{
+
+p {
     margin-left: 5%;
     margin-bottom: 0;
 }
-.applicationHeader div p{
+
+.applicationHeader div p {
     margin-top: 8%;
 }
-.applicationHeader{
+
+.applicationHeader {
     display: flex;
     justify-content: end;
     height: 20%;
     width: 100%;
 }
-.applicationHeader .iconLast{
-    padding-top: 5%; 
-    padding-right: 4%;   
+
+.applicationHeader .iconLast {
+    padding-top: 5%;
+    padding-right: 4%;
     width: auto;
     height: auto;
     filter: invert(100%);
     -webkit-filter: invert(100%);
 }
-.applicationHeader .icon{
-    padding-top: 5%; 
-    padding-right: 1%;   
+
+.applicationHeader .icon {
+    padding-top: 5%;
+    padding-right: 1%;
     filter: invert(100%);
     -webkit-filter: invert(100%);
 }
-.anotherText{
+
+.anotherText {
     display: flex;
     justify-content: center;
     height: 60%;
     width: 100%;
 }
-.applicationCard .applicationInProgressFooter{
+
+.applicationCard .applicationInProgressFooter {
     display: flex;
     height: 20%;
     width: 100%;
@@ -154,41 +175,49 @@ p{
     padding-left: 2%;
     padding-right: 2%;
 }
-.applicationCard .applicationInProgressFooter .btn{
+
+.applicationCard .applicationInProgressFooter .btn {
     flex: 0.1;
     border-radius: 0.6rem;
     height: 80%;
 }
-.applicationCard .applicationInProgressFooter .btn img{
+
+.applicationCard .applicationInProgressFooter .btn img {
     height: 80%;
 }
-.applicationInProgressFooter div{
+
+.applicationInProgressFooter div {
     width: 60%;
     margin-bottom: 5%;
 }
-.applicationInProgressFooter div p{
+
+.applicationInProgressFooter div p {
     size: 30px;
     margin-top: 5%;
     margin-left: 0;
 }
-.sortRadio{
+
+.sortRadio {
     color: aliceblue;
 }
+
 .form-check-input:checked {
     background-color: var(--color4);
     border-color: var(--color4);
 }
-.form-check-input:active{
-    filter:drop-shadow()
+
+.form-check-input:active {
+    filter: drop-shadow()
 }
-.form-check-input:focus{
+
+.form-check-input:focus {
     border-color: var(--color4);
     outline: 0;
     box-shadow: var(--color4);
 }
 
 
-.navbar{
+.navbar {
     position: relative;
     display: flex;
     flex-wrap: wrap;
@@ -197,28 +226,33 @@ p{
     padding-top: .5rem;
     padding-bottom: 0;
 }
-.help{
+
+.help {
     height: 46.8px;
 }
-.form-floating>.form-control, .form-floating>.form-select {
+
+.form-floating>.form-control,
+.form-floating>.form-select {
     height: calc(3.5rem);
 }
 
-.application{
-    width: 100%; 
-    height: 8%;
-    background-color: rgba(43, 40, 39,0.6);
-    display: flex; 
-    align-items: center; 
+.application {
+    width: 100%;
+    height: 8vh;
+    background-color: rgba(43, 40, 39, 0.6);
+    display: flex;
+    align-items: center;
     justify-content: space-around;
+    position: relative;
 }
 
-.application .btn{
+.application .btn {
     color: #fff;
-    border-radius: 0.9rem; 
+    border-radius: 0.9rem;
     background-color: var(--color1);
     border-color: var(--color1);
-    margin-left: 5%; margin-right: 5%;
+    margin-left: 5%;
+    margin-right: 5%;
     width: 40%;
     height: auto;
 }
@@ -226,29 +260,32 @@ p{
 
 
 
-.container::-webkit-scrollbar{
+.container::-webkit-scrollbar {
     width: 1px;
 }
-.container .items{
+
+.container .items {
     width: 100%;
     height: 30%;
     text-align: center;
     overflow: hidden;
 }
-.container .item{
+
+.container .item {
     width: 90%;
     height: 100%;
     overflow: hidden;
 }
-*
-{
+
+* {
     scroll-snap-type: y mandatory;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: sans-serif;
 }
-.container{
+
+.container {
     position: absolute;
     margin-top: 70%;
     margin-bottom: 9%;
@@ -257,7 +294,8 @@ p{
     overflow-x: scroll;
     scroll-snap-type: x mandatory;
 }
-.container section{
+
+.container section {
     min-width: 107%;
     height: auto;
     display: flex;
@@ -266,25 +304,30 @@ p{
     overflow: auto;
     scroll-snap-align: start;
 }
+
 @media (max-width: 800px) {
-    .container{
+    .container {
         display: flex;
         overflow-x: scroll;
     }
 }
 
-.container-fluid a{
+.container-fluid a {
     color: #1e2125;
 }
-.container-fluid a:hover{
+
+.container-fluid a:hover {
     color: #7d7d7d;
 }
-.menu{
+
+.menu {
     position: relative;
     padding-left: 8px;
     padding-right: 8px;
 }
-.click, .click_2{
+
+.click,
+.click_2 {
     background: none;
     padding: 5px;
     font-size: 1.2em;
@@ -293,14 +336,17 @@ p{
     width: 25%;
     transition: 0.3s;
 }
-.notification{
+
+.notification {
     align-items: center;
     padding: 5px;
     padding-left: 13px;
     padding-right: 13px;
     width: 50px;
 }
-.try, .try2{
+
+.try,
+.try2 {
     background-color: white;
     position: center;
     margin-top: 10%;
@@ -309,7 +355,8 @@ p{
     height: 100%;
     color: black;
 }
-.links{
+
+.links {
     padding: 12px;
     font-size: 1.0em;
     border: none;
@@ -319,7 +366,8 @@ p{
     width: 220px;
     transition: 0.3s;
 }
-.list{
+
+.list {
     position: absolute;
     z-index: 100;
     margin-left: -190px;
@@ -333,7 +381,8 @@ p{
     padding-top: 10px;
     padding-bottom: 10px;
 }
-.list_2{
+
+.list_2 {
     position: absolute;
     z-index: 100;
     padding-left: 40%;
@@ -344,15 +393,19 @@ p{
     border-radius: 0.5rem;
     background-color: rgba(28, 28, 28, 0.98);
 }
-.newlist, .newlist2{
+
+.newlist,
+.newlist2 {
     transform: scaleY(1);
 }
-.links{
+
+.links {
     border-radius: 0.2rem;
     background-color: rgba(28, 28, 28, 0);
     color: white;
 }
-.links:hover{
+
+.links:hover {
     background-color: var(--color1);
     color: black;
     transform: scale(1.1);
@@ -361,13 +414,41 @@ p{
 
 
 
-#pbreak{
+#pbreak {
     text-align: left;
 }
-.helpdiv::-webkit-scrollbar{
+
+.helpdiv::-webkit-scrollbar {
     width: 1px;
 }
-.helpdiv .items{
+
+* {
+    scroll-snap-type: y mandatory;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+.helpdiv {
+    padding-top: 5%;
+    width: 100%;
+    min-height: 92vh;
+}
+
+.helpdiv section {
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    overflow: auto;
+}
+
+.helpdiv .item {
+    width: 90%;
+    color: aliceblue;
+}
+
+.helpdiv .items {
     width: 100%;
     height: auto;
     margin-bottom: 4%;
@@ -376,32 +457,9 @@ p{
     background-color: rgba(28, 28, 28, 0.98);
     word-wrap: break-word;
 }
-.helpdiv .item{
-    width: 90%;
-    color: aliceblue;
-}
-*
-{
-    scroll-snap-type: y mandatory;
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-}
-.helpdiv{
-    padding-top: 5%;
-    width: 100%;
-    min-height: 92%;
-}
-.helpdiv section{
-    min-width: 100%;
-    min-height: 92%;
-    display: flex;
-    justify-content: center;
-    overflow: auto;
-}
+
 @media (max-width: 800px) {
-    .helpdiv{
+    .helpdiv {
         display: flex;
     }
 }
