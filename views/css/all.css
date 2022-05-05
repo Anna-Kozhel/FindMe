@@ -416,7 +416,7 @@ p {
     position: absolute;
     margin-left: -2vw;
     min-height: 20vh;
-    min-width: 90vw;
+    min-width: 93vw;
     z-index: 100;
     padding-left: 40%;
     padding-right: 40%;
@@ -495,4 +495,43 @@ p {
     .helpdiv {
         display: flex;
     }
+}
+
+.modal-content {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    width: 98vw;
+    pointer-events: auto;
+    background-color: var(--color3);
+    background-clip: padding-box;
+    border-radius: 0.7rem;
+    outline: 0;
+}
+
+.modal-content hr{
+    color: var(--color2);
+    max-width: 80vw;
+    height: 2.5px;
+    margin-left: 9vw;
+}
+
+.modal-content span{
+    text-align: center;
+    padding: 5%; padding-bottom: 0;
+    color:var(--color2);
+}
+
+.modal-content .modalButtons{
+    display: flex;
+    justify-content: space-between;
+    margin: 5%;
+}
+
+.modal-content .modalButtons .btn{
+    border-radius: 0.9rem;
+    background-color: var(--color1);
+    border-color: var(--color1);
+    width: 35vw;
+    color: var(--color2);
 }
