@@ -18,19 +18,19 @@ app.get(['/','/main'], (request, response)=> {
 })
 
 app.get('/profile', (request, response)=> {
-    response.render('profile', { title: 'Profile'/*, add_button: "Додати новий магазин"*/})
+    response.render('profile', { title: 'Profile'})
 })
 
 app.get('/info', (request, response)=> {
-    response.render('info', { title: 'Info'/*, add_button: "Додати новий магазин"*/})
+    response.render('info', { title: 'Info'})
 })
 
 app.get('/volunteerApplication', (request, response)=> {
-    response.render('volunteerApplication', { title: 'Volunteer'/*, add_button: "Додати новий магазин"*/})
+    response.render('volunteerApplication', { title: 'Volunteer'})
 })
 
 app.get('/neederApplication', (request, response)=> {
-    response.render('neederApplication', { title: 'InNeed'/*, add_button: "Додати новий магазин"*/})
+    response.render('neederApplication', { title: 'InNeed'})
 })
 
 // запускаємо аплікацію
