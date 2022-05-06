@@ -279,7 +279,7 @@ p {
     -webkit-filter: invert(100%);
 }
 
-.mainProfileIcon{
+.mainProfileIcon {
     background-color: var(--color2);
     border-radius: 10rem;
     height: 6vh;
@@ -372,8 +372,7 @@ p {
     width: 50px;
 }
 
-.try,
-.try2 {
+.try {
     min-width: 80vw;
     border-radius: 0.5rem;
     background-color: var(--color2);
@@ -385,23 +384,38 @@ p {
     color: black;
 }
 
+.try p{
+    margin: 0 5% 0 5%;
+}
+
+.partApplication{
+    width: 90%;
+    margin: 0 5% 0 5%;
+    min-height: 6vh;
+    background-color: var(--color3);
+    border-radius: 0.6rem;
+    padding: 2%;
+}
+.partApplication p{
+    color: var(--color2);
+}
+
 .links {
-    padding: 12px;
+    padding: 3vw;
     font-size: 1.0em;
     border: none;
     outline: none;
-    margin-left: -10.5px;
     height: 60px;
-    width: 220px;
+    width: 56vw;
     transition: 0.3s;
 }
 
 .list {
     position: absolute;
     z-index: 100;
-    margin-left: -59vw;
-    padding-left: 20px;
-    padding-right: 20px;
+    margin-left: -64vw;
+    padding-left: 9vw;
+    padding-right: 9vw;
     transform: scaleY(0);
     transform-origin: top;
     transition: 0.3s;
@@ -409,7 +423,7 @@ p {
     background-color: rgba(28, 28, 28, 0.95);
     padding-top: 10px;
     padding-bottom: 10px;
-    min-width: 65vw;
+    width: 74vw;
 }
 
 .list_2 {
@@ -509,29 +523,121 @@ p {
     outline: 0;
 }
 
-.modal-content hr{
+.modal-content hr {
     color: var(--color2);
     max-width: 80vw;
     height: 2.5px;
-    margin-left: 9vw;
+    margin-left: 8vw;
 }
 
-.modal-content span{
+i {
+    color: #fff;
+    margin: 2%;
+    height: 2vh;
+}
+
+.applicationHeader i {
+    margin-top: 7%;
+}
+
+.modal-content span {
     text-align: center;
-    padding: 5%; padding-bottom: 0;
-    color:var(--color2);
+    padding: 5%;
+    padding-bottom: 0;
+    color: var(--color2);
 }
 
-.modal-content .modalButtons{
+.modalButtons {
     display: flex;
     justify-content: space-between;
     margin: 5%;
 }
 
-.modal-content .modalButtons .btn{
+.modal-content .modalButtons .btn {
     border-radius: 0.9rem;
     background-color: var(--color1);
     border-color: var(--color1);
     width: 35vw;
     color: var(--color2);
+}
+
+
+
+
+.menu hr {
+    color: var(--color2);
+    width: 56vw;
+    margin: 5px 5px 0px 0px;
+    opacity: 1;
+    border: 10%;
+}
+
+.link1 {
+    border: none;
+}
+
+.links:hover {
+    background-color: rgba(152, 17, 48, 0);
+    color: var(--color4);
+    font-style: bold;
+    transform: scale(1.01);
+}
+
+.list .dropinfo {
+    position: relative;
+    height: 100%;
+    color: var(--color2);
+    z-index: 1;
+    display: none;
+    box-sizing: border-box;
+    align-items: center;
+}
+
+.dropwindow:hover .dropinfo {
+    display: block;
+}
+
+.dropwindow:hover .links {
+    flex-direction: revert;
+}
+
+.form_button {
+    font-family: sans-serif;
+    letter-spacing: 1px;
+}
+
+.formButtons {
+    display: flex;
+    justify-content: space-between;
+}
+
+.form_button {
+    border: none;
+    font-size: 15px;
+    background-color: var(--color1);
+    text-align: center;
+    border-radius: 0.6em;
+    padding: 1% 2% 1% 2%;
+    display: inline-block;
+    margin: 2% 0 2% 0;
+    width: 45%;
+}
+
+.formButtons a {
+    color: var(--color2);
+}
+
+.list a {
+    text-decoration: none;
+}
+
+.dropinfo .form-floating {
+    margin: 5% 2% 5% 2%;
+    color: var(--color3);
+    width: 54vw;
+    
+}
+
+.dropinfo .form-control{
+    border-radius: 0.5rem;
 }

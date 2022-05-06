@@ -2,32 +2,93 @@
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid" >
             <%- include('../notification.ejs') %>
-            <div class = "menu">
-                <button class="click"><a href = "#"><img src="/views/usedIcons/setting.png" class="iconControl" alt="settings"></a></button>
-                <div class="list" >
-                    <button class="links">Редагувати ім'я або Прізвище</button>
-                    <button class="links">Редагувати номер телефону</button>
-                    <button class="links">Редагувати пошту</button>
-                    <button class="links">Редагувати місцерозташування</button>
-                    <button class="links">Змінити пароль</button>
-                    <button class="links">Видалити акаунт</button>
-                    <button class="links">Вийти з акаунту</button>
+            <div id = "menuid" class = "menu">
+                <button id = "btn" class="click"><a href = "#"><i class="fa-solid fa-gear fa-lg"></i></a></button>
+                <div id = "listid" class="list" >
+                    <div id="window1" class = "dropwindow window1">
+                        <button class="links link1">Редагувати ім'я або прізвище</button>
+                        <div class="dropinfo info1">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="floatingDescriptionChange1.1" placeholder="name">
+                                <label for="floatingDescription">Нове ім'я...</label>
+                            </div>
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="floatingDescriptionChange1.2" placeholder="surname">
+                                <label for="floatingDescription">Нове прізвище...</label>
+                            </div>
+                            <div class="formButtons">
+                                <a href="../profile" class="form_button">Скасувати</a>
+                                <a href="../profile" class="form_button">Змінити</a>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class = "dropwindow window2">
+                        <button class="links link2">Редагувати номер телефону</button>
+                        <div class="dropinfo info2">
+                            <div class="form-floating">
+                                <input type="number" class="form-control" id="floatingDescriptionChange2" placeholder="phoneNumber">
+                                <label for="floatingDescription">Новий номер телефону...</label>
+                            </div>
+                            <div class="formButtons">
+                                <a href="../profile" class="form_button">Скасувати</a>
+                                <a href="../profile" class="form_button">Змінити</a>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class = "dropwindow window3">
+                        <button class="links link3">Редагувати пошту</button>
+                        <div class="dropinfo info3">
+                            <div class="form-floating">
+                                <input type="text" class="form-control" id="floatingDescriptionChange3" placeholder="email">
+                                <label for="floatingDescription">Нова пошта...</label>
+                            </div>
+                            <div class="formButtons">
+                                <a href="../profile" class="form_button">Скасувати</a>
+                                <a href="../profile" class="form_button">Змінити</a>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class = "dropwindow window4">
+                        <button class="links link4">Редагувати місцерозташування</button>
+                        <div class="dropinfo info4">
+                            
+                            <div class="formButtons">
+                                <a href="../profile" class="form_button">Скасувати</a>
+                                <a href="../profile" class="form_button">Змінити</a>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div id= "window5" class = "dropwindow window5">
+                        <button class="links link5">Змінити пароль</button>
+                        <div id= "info5" class="dropinfo info5">
+                            <div class="form-floating">
+                                <input type="password" class="form-control" id="floatingDescriptionChange5.1" placeholder="password">
+                                <label for="floatingDescription">Старий пароль...</label>
+                            </div>
+                            <div class="form-floating">
+                                <input type="password" class="form-control" id="floatingDescriptionChange5.2" placeholder="password">
+                                <label for="floatingDescription">Новий пароль...</label>
+                            </div>
+                            <div class="form-floating">
+                                <input type="password" class="form-control" id="floatingDescriptionChange5.3" placeholder="password">
+                                <label for="floatingDescription">Підтвердіть пароль...</label>
+                            </div>
+                            <div class="formButtons">
+                                <a href="../profile" class="form_button">Скасувати</a>
+                                <a href="../profile" class="form_button">Змінити</a>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <button class="links" role="button" onclick=" showModalOfConfirmationDeletingAccount()">Видалити акаунт</button>
+                    <hr>
+                    <button class="links" role="button" onclick="showModalOfConfirmationLogingOutAccount()">Вийти з акаунту</button>
                 </div>
             </div>
         </div>
     </nav>
-    <script>
-        let click = document.querySelector('.click')
-        let list = document.querySelector('.list')
-        click.addEventListener("click",()=>{
-            list.classList.toggle('newlist');
-        })
-    </script>
-    <script>
-        let click_2 = document.querySelector('.click_2')
-        let list_2 = document.querySelector('.list_2')
-        click_2.addEventListener("click",()=>{
-            list_2.classList.toggle('newlist2');
-        })
-    </script>
 </header> 
