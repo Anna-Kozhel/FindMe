@@ -33,6 +33,10 @@ app.get('/neederApplication', (request, response)=> {
     response.render('neederApplication', { title: 'InNeed'})
 })
 
+app.get('/registration', (request, response)=> {
+    response.render('registration', { title: 'Registration'})
+})
+
 // запускаємо аплікацію
 app.listen(port, ()=>{
     console.log(`\nServer start!\n\nURL of site : http://localhost:${port}`)
