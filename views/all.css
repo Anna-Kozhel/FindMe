@@ -370,11 +370,11 @@ p {
     color: black;
 }
 
-.try p{
+.try p {
     margin: 0 5% 0 5%;
 }
 
-.partApplication{
+.partApplication {
     width: 90%;
     margin: 0 5% 0 5%;
     min-height: 6vh;
@@ -382,7 +382,8 @@ p {
     border-radius: 0.6rem;
     padding: 2%;
 }
-.partApplication p{
+
+.partApplication p {
     color: var(--color2);
 }
 
@@ -616,10 +617,49 @@ i {
     width: 54vw;
 }
 
-.dropinfo .form-control{
+.dropinfo .form-control {
     border-radius: 0.5rem;
 }
 
-.regPage h1{
+.regPage h1 {
     color: var(--color2);
+    margin: 10vh 30% auto 30%;
+    text-align: center;
+}
+
+.regPage h2{
+    color: var(--color2);
+    margin: 4vh 20% 2vh 20%;
+    font-size: 20px;
+    text-align: center;
+}
+
+.regPage h3{
+    color: var(--color2);
+    margin: 0 20% 0 20%;
+    font-size: 17px;
+    text-align: justify;
+}
+
+.regPage .reg{
+    margin: 3% 15% 3% 15%;
+    color: var(--color3);
+    width: 70vw;
+}
+
+.regPage .special{
+    margin: 1% 15% 1% 15%;
+}
+
+.butt{
+    display: flex;
+    justify-content: center;
+}
+
+.registration{
+    background-color: var(--color10);
+    color: var(--color3);
+    margin: 3%;
+    min-width: 30vw;
+    border-radius: 0.8rem;
 }

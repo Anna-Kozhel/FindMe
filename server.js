@@ -13,8 +13,8 @@ app.set('views', path.join(__dirname, 'views'))
 app.set('view engine', 'ejs')
 
 // налаштовуємо маршрутизацію
-app.get(['/','/main'], (request, response)=> {
-    response.render('main', { title: 'Main' })
+app.get(['/','/logUp'], (request, response)=> {
+    response.render('logUp', { title: 'Registration' })
 })
 
 app.get('/profile', (request, response)=> {
@@ -33,8 +33,12 @@ app.get('/neederApplication', (request, response)=> {
     response.render('neederApplication', { title: 'InNeed'})
 })
 
-app.get('/registration', (request, response)=> {
-    response.render('registration', { title: 'Registration'})
+app.get('/main', (request, response)=> {
+    response.render('main', { title: 'Main'})
+})
+
+app.get('/logIn', (request, response)=> {
+    response.render('logIn', { title: 'Sign In'})
 })
 
 // запускаємо аплікацію

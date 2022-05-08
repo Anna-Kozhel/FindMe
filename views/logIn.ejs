@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include('head.ejs') %>
+<body>
+    <div class="regPage" style="margin-top: 25vh;">
+        <h1>Увійти</h1>
+        <h2>Номер телефону:</h2>
+        <div class="form-floating reg">
+            <input type="number" class="form-control" id="floatingDescription3" placeholder="phoneNumber">
+            <label for="floatingDescription">+38 (0**) *** ** **</label>
+        </div>
+        <h2>Пароль:</h2>
+        <div class="form-floating reg">
+            <input type="password" class="form-control" id="floatingDescription5" placeholder="password">
+            <label for="floatingDescription">Пароль...</label>
+        </div>
+        <div class="butt">
+            <a class="btn btn-dark registration" role="button" href="main">Створити</a>
+        </div>
+    </div>
+    <%- include('scripts.ejs') %>
+</body>
+</html>

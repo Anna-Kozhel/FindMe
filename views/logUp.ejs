@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<%- include('head.ejs') %>
+<body>
+    <div class="regPage">
+        <h1>Реєстрація</h1>
+        <div style="width: 40vw; height: 25vh; background-color: darkgrey; border-radius: 1.5rem; margin: 1vh 30vw 1vh 30vw;">
+            <p style="padding: 5vh; text-align: center;">Photo</p>
+        </div>
+        <h2>Ім'я та Прізвище:</h2>
+        <div class="form-floating reg">
+            <input type="text" class="form-control" id="floatingDescription1" placeholder="name">
+            <label for="floatingDescription">Ім'я...</label>
+        </div>
+        <div class="form-floating reg">
+            <input type="text" class="form-control" id="floatingDescription2" placeholder="surname">
+            <label for="floatingDescription">Прізвище...</label>
+        </div>
+        <h2>Контактні дані:</h2>
+        <h3>Номер телефону:</h3>
+        <div class="form-floating reg special">
+            <input type="number" class="form-control" id="floatingDescription3" placeholder="phoneNumber">
+            <label for="floatingDescription">+38 (0**) *** ** **</label>
+        </div>
+        <h3>Пошта:</h3>
+        <div class="form-floating reg special">
+            <input type="text" class="form-control" id="floatingDescription4" placeholder="email">
+            <label for="floatingDescription">email@gmail.com...</label>
+        </div>
+        <h2>Пароль:</h2>
+        <div class="form-floating reg">
+            <input type="password" class="form-control" id="floatingDescription5" placeholder="password">
+            <label for="floatingDescription">Пароль...</label>
+        </div>
+        <div class="form-floating reg">
+            <input type="password" class="form-control" id="floatingDescription6" placeholder="password">
+            <label for="floatingDescription">Підтвердіть пароль...</label>
+        </div>
+        <h2>Місцерозташування:</h2>
+        <div class="butt">
+            <a class="btn btn-dark registration" role="button" href="main">Створити</a>
+            <a class="btn btn-dark registration" role="button" href="logIn">Увійти</a>
+        </div>
+    </div>
+    <%- include('scripts.ejs') %>
+</body>
+</html>
