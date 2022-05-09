@@ -52,6 +52,51 @@
     }
     function modal_confirm() { window.location.href = 'http://localhost:3000/main' }
 </script>
+<script>
+    const regions = [
+    {id: 1, name: 'Вінницька область'},
+    {id: 2, name: 'Волинська область'},
+    {id: 3, name: 'Дніпропетровська область'}
+]
 
+const districts = {
+    1: [
+        {id: 1, name: 'Вінницький район'},
+        {id: 2, name: 'Гайсинський район'},
+        {id: 3, name: 'Жмеринський район'},
+        {id: 4, name: 'Могилів-Подільський район'},
+        {id: 5, name: 'Тульчинский район'},
+        {id: 6, name: 'Хмільницький район'}
+    ],
+    2: [
+        {id: 1, name: 'Володимир-Волинський район'},
+        {id: 2, name: 'Камінь-Каширський район'},
+        {id: 3, name: 'Ковельский район'},
+        {id: 4, name:'Луцький район'}
+    ],
+    3: [
+        {id: 1, name: 'Дніпровський район'},
+        {id: 2, name: "Кам'янський район"},
+        {id: 3, name: 'Криворізький район'},
+        {id: 4, name:'Нікопольський район'}
+    ]
+}
+
+const region = document.querySelector('.select_box_1'),
+    district = document.querySelector('.select_box_2')
+
+
+regions.forEach(function(reg) {
+    region.add(new Option(reg.name, reg.id))
+});
+
+region.addEventListener('change', function() {
+    district.classList.remove('select_box_2')
+    district.length = 0
+    districts[this.value].forEach(function(reg) {
+        district.add(new Option(reg.name, reg.id))
+    });
+});
+</script>
 <script src="https://kit.fontawesome.com/a8aed0564c.js" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>

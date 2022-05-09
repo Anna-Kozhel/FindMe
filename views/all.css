@@ -656,10 +656,35 @@ i {
     justify-content: center;
 }
 
+.form-floating>label{
+    font-size: 4vw;
+}
+
 .registration{
     background-color: var(--color10);
     color: var(--color3);
     margin: 3%;
-    min-width: 30vw;
+    min-width: 32vw;
     border-radius: 0.8rem;
+}
+
+.select_box{
+    border-radius: 0.5rem;
+    height: 7vh;
+    width: 70vw;
+    margin: 1% 15% 1% 15%;
+}
+
+.select_box_change{
+    border-radius: 0.5rem;
+    height: 6vh;
+    width: 54vw;
+    margin: 1% 2% 5% 2%;
+}
+
+.select_box_special{
+    border-radius: 0.4rem;
+    height: 7vh;
+    width: 70vw;
+    margin: 2% 15% 5% 15%;
 }
