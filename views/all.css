@@ -4,7 +4,9 @@
 	--color3: rgb(207, 66, 90);
 	--color0: rgb(3, 3, 3);
 	--color007: rgba(3, 3, 3, 0.7);
+	--color4095: rgba(28, 28, 28, 0.95);
 	--color5: rgb(43, 40, 39);
+	--color506: rgba(43, 40, 39, 0.6);
 	--color255: rgb(234, 233, 229);
 }
 
@@ -25,7 +27,7 @@ body {
 	bottom: 0;
 	width: 100%;
 	height: 8%;
-	background-color: rgba(43, 40, 39, 0.6);
+	background-color: var(--color506);
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
@@ -305,7 +307,7 @@ i {
 .application {
 	width: 100%;
 	height: 8vh;
-	background-color: rgba(43, 40, 39, 0.6);
+	background-color: var(--color506);
 	display: flex;
 	align-items: center;
 	justify-content: space-around;
@@ -334,11 +336,6 @@ i {
 	border-color: var(--color1);
 	min-width: 35vw;
 	color: var(--color255);
-}
-
-.invertColor {
-	filter: invert(100%);
-	-webkit-filter: invert(100%);
 }
 
 .mainProfileIcon {
@@ -406,10 +403,6 @@ i {
 	margin: 0 0 0 0;
 }
 
-.container-fluid a:hover {
-	color: #7d7d7d;
-}
-
 .menu {
 	position: relative;
 	padding-left: 8px;
@@ -468,9 +461,25 @@ i {
 }
 
 .partApplicationHeader {
-	display:flex; 
-	justify-content:space-between; 
+	display: flex;
+	justify-content: space-between;
 	font-size: 13px;
+}
+
+.partApplication .partApplicationHeader .date {
+	color: var(--color3) !important;
+}
+
+.partApplication .partApplicationHeader .urgent {
+	color: var(--color1) !important;
+}
+
+form p {
+	color: var(--color255);
+	font-size: 20px;
+	text-align: center;
+	margin: 5px 0 5px 0;
+	display: inline;
 }
 
 .links {
@@ -493,7 +502,7 @@ i {
 	transform-origin: top;
 	transition: 0.3s;
 	border-radius: 0.5rem;
-	background-color: rgba(28, 28, 28, 0.95);
+	background-color: var(--color4095);
 	padding-top: 10px;
 	padding-bottom: 10px;
 	width: 74vw;
@@ -511,7 +520,7 @@ i {
 	transform-origin: top;
 	transition: 0.3s;
 	border-radius: 0.5rem;
-	background-color: rgba(28, 28, 28, 0.95);
+	background-color: var(--color4095);
 }
 
 .newlist,
@@ -571,7 +580,7 @@ i {
 	margin: 0 0 4% 0;
 	padding: 5%;
 	border-radius: 0.6rem;
-	background-color: rgba(28, 28, 28, 0.98);
+	background-color: var(--color007);
 	word-wrap: break-word;
 }
 
@@ -591,6 +600,21 @@ i {
 	background-clip: padding-box;
 	border-radius: 0.7rem;
 	outline: 0;
+}
+
+.sort hr {
+	margin: 1rem 0 !important;
+}
+
+.formH1 {
+	color: var(--color255);
+	font-size: 30px;
+	text-align: justify;
+	margin-bottom: 3%;
+}
+
+.descriptionForm {
+	color: var(--color0);
 }
 
 .modal-content hr {

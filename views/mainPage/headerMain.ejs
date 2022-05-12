@@ -2,11 +2,11 @@
     <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container-fluid" >
             <%- include('../notification.ejs') %>
-            <div class = "menu">
-                <button class="click"><a href = "#"><a><i class="fa-solid fa-magnifying-glass fa-lg"></i></a></button>
-                <div class="list" >
+            <div id = "menuid" class = "menu">
+                <button id = "btn" class="click"><a href = "#"><i class="fa-solid fa-magnifying-glass fa-lg"></i></a></button>
+                <div id = "listid" class="list sort" >
                     <form>
-                        <p style="color: white; font-size: 20px; text-align: center; margin-left: 0; margin-top: 10px; margin-right: 2%; display: inline;">
+                        <p>
                             По місцезнахедженню:
                         </p>
                         <div class="form-check">
@@ -28,9 +28,9 @@
                             </label>
                           </div>
                     </form>
-                    <hr style="margin: 1rem 0;">
+                    <hr>
                     <form>
-                        <p style="color: white; font-size: 20px; text-align: center; margin-left: 0; margin-top: 10px; margin-right: 2%; display: inline;">
+                        <p>
                             По типу допомоги:
                         </p>
                         <div class="form-check">
@@ -86,18 +86,4 @@
             </div>
         </div>
     </nav>
-    <script>
-        let click = document.querySelector('.click')
-        let list = document.querySelector('.list')
-        click.addEventListener("click",()=>{
-            list.classList.toggle('newlist');
-        })
-    </script>
-    <script>
-      let click_2 = document.querySelector('.click_2')
-      let list_2 = document.querySelector('.list_2')
-      click_2.addEventListener("click",()=>{
-          list_2.classList.toggle('newlist2');
-      })
-  </script>
 </header> 
