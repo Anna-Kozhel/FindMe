@@ -498,22 +498,38 @@ form p {
 
 .droppoints{
 	display: none;
-	z-index: 1000;
+	z-index: 100;
 	position: absolute;
 	border-radius: 0.5rem;
-	background-color: rgba(28, 28, 28, 0.95);
+	background-color: var(--color4095);
 	margin-bottom: 0;
-	margin-left: -30vw;
+	margin-left: -50vw;
 	min-width: 10em;
 	min-height: 5em;
 	bottom: 90%;
-
+	padding: 0;
 }
+
+.editingApp {
+	margin: 0;
+	width: 55vw;
+	background-color: transparent;
+	border-color: transparent;
+	color: var(--color255);
+	padding: 3%;
+}
+
+.editingApp:hover {
+	border: 2px solid var(--color255);
+	background-color: transparent;
+	color: var(--color255);
+}
+
 .threepoints:hover .droppoints{
 	display: block;
 }
 .threepoints{
-	z-index: 1000;
+	z-index: 99;
 	position: relative;
 }
 
