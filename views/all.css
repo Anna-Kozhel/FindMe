@@ -13,9 +13,9 @@
 
 :root {
 	--c11: rgb(154, 170, 186);
+	--c9: rgb(196, 212, 225);
 	--c7: rgb(234, 233, 229);
 	--c8: rgb(48, 44, 41);
-	--c9: rgb(196, 212, 225);
 	--c10: rgb(157, 152, 146);
 }
 
@@ -531,6 +531,10 @@ form p {
 
 .threepoints {
 	position: relative;
+}
+
+.mainApplicationList {
+	margin-bottom: 8vh;
 }
 
 .list {
