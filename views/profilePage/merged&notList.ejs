@@ -1,9 +1,9 @@
-<div id="carouselCaptions" class = "container carousel slide" data-ride="carousel">
+<div id="carouselCaptions" class = "container carousel">
     <div class="carousel-indicators">
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
     </div>
-    <section>
+    <section class="oneScroll">
         <div class = "item">
             <div class = "items">
                 <%- include('applicationWaiting.ejs') %>
@@ -19,7 +19,7 @@
             </div>
         </div>
     </section>
-    <section>
+    <section class="twoScroll">
         <div class = "item">
             <div class = "inProgress">
                 <%- include('applicationInProgress.ejs') %>
@@ -33,6 +33,3 @@
         </div>
     </section>
 </div>
-<script>
-
-</script>

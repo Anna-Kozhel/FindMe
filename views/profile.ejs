@@ -3,10 +3,13 @@
 <%- include('head.ejs') %>
 <body>
     <%- include('profilePage/profileHeader.ejs') %>
-    <%- include('profilePage/profileCard.ejs') %>
+    <div class="CenteredCard">
+        <%- include('profilePage/profileCard.ejs') %>
+    </div>
     <%- include('profilePage/merged&notList.ejs') %>
     <%- include('controlPanel.ejs') %>
     <%- include('confirmation.ejs') %>
-    <%- include('scripts.ejs') %>
+    <%- include('toast.ejs') %>
+    <%- include('frontScript.ejs') %>
 </body>
 </html>

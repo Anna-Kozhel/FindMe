@@ -93,8 +93,8 @@
 }
 
 .fa-xl {
-	font-size: 1.5em;
-	line-height: .04167em;
+	font-size: 1.4em;
+	line-height: none;
 	vertical-align: -.125em
 }
 
@@ -481,22 +481,19 @@
 }
 
 .fa-stack {
-	display: inline-block;
-	height: auto;
+	height: 2em;
 	line-height: 2em;
-	position: relative;
-    margin-top: -30px;
-    margin-right: 5px;
 	vertical-align: middle;
-	width: 1.6em
+	width: 1.7em
 }
 
 .fa-stack-1x,
 .fa-stack-2x, 
 .work,
 .bell,
-.circle {
-	left: 0;
+.circle,
+.home {
+	left: -1px;
 	position: absolute;
 	text-align: center;
 	width: 100%;
@@ -506,12 +503,15 @@
 
 .fa-stack-1x {
 	line-height: inherit;
-    margin-left: 2.5px; 
-    margin-top: -0.5px;
+	margin-top: -4px;
 }
 
 .fa-stack-2x {
-	font-size: 1.5em
+	font-size: 1.4em
+}
+
+.home {
+	font-size: 1.45em;
 }
 
 .fa-inverse {
