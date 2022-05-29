@@ -1,4 +1,6 @@
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js" type="text/javascript"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 <script>
   const popupQuerySelector = "#listid";
   const popupEl = document.querySelector(popupQuerySelector);
@@ -11,8 +13,8 @@
       }
     }, 250);
   });
-</script>
-<script>
+
+    /////////////////////////////// не трожжжжжжжжжж
     function modal_confirm_create(message, no, yes, target, src) {
         $('#modal_confirm_message').text(message);
         $('#modal_confirm_no').text(no);
@@ -24,10 +26,6 @@
         modal_confirm_create("Чи впевнені Ви, що хочете створити оголошення?", "Відмінити", "Підтвердити", "yes");
         $('#modal_confirm').modal('show');
     }
-    function showModalOfCanceling() {
-        modal_confirm_create("Чи впевнені Ви, що хочете вийти з сторіки створення оголошення?", "Відмінити", "Підтвердити", "no");
-        $('#modal_confirm').modal('show');
-    }
     function showModalOfConfirmationDeletingAccount() {
         modal_confirm_create("Чи впевнені Ви, що хочете видалити акаунт?", "Відмінити", "Підтвердити", "sure");
         $('#modal_confirm').modal('show');
@@ -36,55 +34,7 @@
         modal_confirm_create("Чи впевнені Ви, що хочете вийти з акаунту?", "Відмінити", "Підтвердити", "sure");
         $('#modal_confirm').modal('show');
     }
-    function modal_confirm() { window.location.href = 'http://localhost:3000/main' }
-</script>
-<script>
-    const regions = [
-    {id: 1, name: 'Вінницька область'},
-    {id: 2, name: 'Волинська область'},
-    {id: 3, name: 'Дніпропетровська область'}
-]
 
-const districts = {
-    1: [
-        {id: 1, name: 'Вінницький район'},
-        {id: 2, name: 'Гайсинський район'},
-        {id: 3, name: 'Жмеринський район'},
-        {id: 4, name: 'Могилів-Подільський район'},
-        {id: 5, name: 'Тульчинский район'},
-        {id: 6, name: 'Хмільницький район'}
-    ],
-    2: [
-        {id: 1, name: 'Володимир-Волинський район'},
-        {id: 2, name: 'Камінь-Каширський район'},
-        {id: 3, name: 'Ковельский район'},
-        {id: 4, name:'Луцький район'}
-    ],
-    3: [
-        {id: 1, name: 'Дніпровський район'},
-        {id: 2, name: "Кам'янський район"},
-        {id: 3, name: 'Криворізький район'},
-        {id: 4, name:'Нікопольський район'}
-    ]
-}
-
-const region = document.querySelector('.select_box_1'),
-    district = document.querySelector('.select_box_2')
-
-
-regions.forEach(function(reg) {
-    region.add(new Option(reg.name, reg.id))
-});
-
-region.addEventListener('change', function() {
-    district.classList.remove('select_box_2')
-    district.length = 0
-    districts[this.value].forEach(function(reg) {
-        district.add(new Option(reg.name, reg.id))
-    });
-});
-</script>
-<script>
     let click = document.querySelector('.click')
     let list = document.querySelector('.list')
     let container1 = document.getElementById('menuid');
@@ -120,30 +70,46 @@ region.addEventListener('change', function() {
             container_2.style.display = "block";
         }
     });
-</script>
 
-<script>
-    function Toast (firstId, secondID, innerClass, message){
-        const toastTrigger = document.querySelector(firstId)
-        const toastLiveExample = document.querySelector(secondID)
+    /////////////////////////// не руш, бу кусь
+    function Toast (buttonId, innerClass, message){
+        const toastTrigger = document.querySelector(buttonId)
+        const toastDiv = document.querySelector('#liveToast')
         if (toastTrigger) {
             toastTrigger.addEventListener('click', function () {
-            const toast = new bootstrap.Toast(toastLiveExample)
-            $(innerClass).text(message)
+            const toast = new bootstrap.Toast(toastDiv)
+            $(innerClass).text(message);
             toast.show()
         })}
     }
-    Toast('#liveToastBtn1', '#liveToast', '.toast-body', 'Ваші ініціали змінено!')
-    Toast('#liveToastBtn2', '#liveToast', '.toast-body', 'Ваш номер телефону змінено!')
-    Toast('#liveToastBtn3', '#liveToast', '.toast-body', 'Вашу пошту змінено!')
-    Toast('#liveToastBtn4', '#liveToast', '.toast-body', 'Ваше місцерозташування змінено!')
-    Toast('#liveToastBtn5', '#liveToast', '.toast-body', 'Ваш пароль змінено!')
-    Toast('#liveToastBtn6', '#liveToast', '.toast-body', 'Оголошення видалено!')
-    Toast('#liveToastBtn7', '#liveToast', '.toast-body', 'Оголошення змінено!')
-    Toast('#liveToastBtn8', '#liveToast', '.toast-body', 'Пару з партнером скасовано!')
-    Toast('#liveToastBtn9', '#liveToast', '.toast-body', 'Взаємодопомога успішно завершена!')
-    Toast('#liveToastBtn10', '#liveToast', '.toast-body', 'Ми продовжимо шукати Вам партнера для допомоги!')
-    Toast('#liveToastBtn11', '#liveToast', '.toast-body', 'Взаємодопомога успішно завершена!')
+    Toast('#liveToastBtn1', '.toast-body', 'Ваші ініціали змінено!')
+    Toast('#liveToastBtn2', '.toast-body', 'Ваш номер телефону змінено!')
+    Toast('#liveToastBtn3', '.toast-body', 'Вашу пошту змінено!', 'profile')
+    Toast('#liveToastBtn4', '.toast-body', 'Ваше місцерозташування змінено!')
+    Toast('#liveToastBtn5', '.toast-body', 'Ваш пароль змінено!')
+    Toast('#liveToastBtn6', '.toast-body', 'Оголошення видалено!')
+    Toast('#liveToastBtn7', '.toast-body', 'Оголошення змінено!')
+    Toast('#liveToastBtn8', '.toast-body', 'Пару з партнером скасовано!')
+    Toast('#liveToastBtn9', '.toast-body', 'Взаємодопомога успішно завершена!')
+    Toast('#liveToastBtn10', '.toast-body', 'Ми продовжимо шукати Вам партнера для допомоги!')
+    Toast('#liveToastBtn11', '.toast-body', 'Взаємодопомога успішно завершена!', 'main')
+
+    function ActiveBorder (buttonId, elementId) {
+        if(window.location.pathname === buttonId) {
+        const element = document.querySelector(elementId);
+        element.classList.add("ifClick");}
+    }
+    ActiveBorder('/profile', '#profile');
+    ActiveBorder('/info', '#info');
+    ActiveBorder('/main', '#main');
+    ActiveBorder('/volunteerApplication', '#volunteerApplication');
+    ActiveBorder('/volunteerApplication', '#volunteerApplication');
+</script>
+<script>
+    $(document).ready(function(){
+        $('[data-toggle="popover"]').popover();
+    });
 </script>
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+

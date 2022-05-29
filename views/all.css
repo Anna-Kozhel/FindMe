@@ -1,14 +1,18 @@
 :root {
 	--color1: rgb(152, 17, 48);
+	--filter1: invert(16%) sepia(34%) saturate(6492%) hue-rotate(331deg) brightness(86%) contrast(101%);
 	--color2: rgb(120, 48, 65);
 	--color3: rgb(207, 66, 90);
 	--color0: rgb(3, 3, 3);
-	--color007: rgba(3, 3, 3, 0.7);
+	--color004: rgba(3, 3, 3, 0.4);
 	--color4095: rgba(28, 28, 28, 0.95);
 	--color5: rgb(43, 40, 39);
+	--filter5: invert(11%) sepia(18%) saturate(206%) hue-rotate(329deg) brightness(98%) contrast(88%);
 	--color506: rgba(43, 40, 39, 0.6);
 	--color6: rgb(157, 152, 146);
+	--filter6: invert(76%) sepia(2%) saturate(1022%) hue-rotate(354deg) brightness(80%) contrast(84%);
 	--color255: rgb(234, 233, 229);
+	--filter255: invert(100%) sepia(5%) saturate(6391%) hue-rotate(300deg) brightness(109%) contrast(84%);
 	--color25508: rgba(234, 233, 229, 0.8);
 }
 
@@ -26,6 +30,7 @@ body {
 
 .controlPanel {
 	position: fixed;
+	z-index: 200;
 	bottom: 0;
 	width: 100%;
 	height: 4em;
@@ -41,17 +46,38 @@ body {
 	align-items: center;
 }
 
-.buttonMain a {
+.buttonMain button {
 	color: var(--color255);
-	margin: 2% 5% 4% 50%;
+	margin: 5px 5% 10px 50%;
 	border: 1px solid var(--color255);
 	font-size: 15px;
 	background-color: transparent;
 	text-align: center;
 	border-radius: 0.6em;
-	padding: 0.5%;
+	padding: 0.3em;
 	display: inline-block;
 	width: 45%;
+	height: 2.2em;
+}
+
+.buttonMain button:hover {
+	color: var(--color3);
+	border: 1px solid var(--color2);
+	box-shadow: var(--color255);
+}
+
+.buttonMain a {
+	color: var(--color255);
+	margin: 5px 5% 10px 50%;
+	border: 1px solid var(--color255);
+	font-size: 15px;
+	background-color: transparent;
+	text-align: center;
+	border-radius: 0.6em;
+	padding: 0.3em;
+	display: inline-block;
+	width: 45%;
+	height: 2.2em;
 }
 
 .buttonMain a:hover {
@@ -65,15 +91,19 @@ body {
 	left: 2.5%;
 	height: 45px;
 	border-radius: 0.9rem;
-	padding: 1vh 2.3vh;
+	padding: 0;
 	background-color: var(--color1);
-	border-color: var(--color1);
+	border: solid 1px var(--color1);
 	margin: 0 0 0 4%;
+}
+
+.ifClick {
+	border: solid 3px var(--color255) !important;
 }
 
 .CenteredCard{
 	display: flex;
-	justify-content: center;
+	justify-content: center !important;
 }
 
 .profileCard {
@@ -90,33 +120,43 @@ body {
 
 .profileInfo {
 	position: relative;
-	min-width: 40vw;
+	display: flex;
+	align-items: center;
 	height: 80%;
 	margin: 25px 5px 25px 5px;
 }
 
-.profileInfo p {
+.profileInfo div p {
 	color: var(--color255);
 	margin: 5px 0 0 0;
 }
 
 .profilePhoto {
 	position: relative;
-	height: 215px;
+	display: flex;
+	align-items: center;
+	height: 214px;
 	width: 164px;
-	background-color: var(--color255);
+	background-color: transparent;
 	margin: 25px 5px 25px 5px;
 }
 
-.profilePhoto img {
-	width: auto;
-	height: 100%;
+.profilePhoto div{
+	width: 100%;
+	height: auto;
+	background-color: var(--color255);
 }
 
+.profilePhoto div img {
+	width: 100%;
+	height: auto;
+}
+
+
 .applicationCard {
-	background-color: var(--color007);
+	background-color: var(--color004);
 	border-radius: 0.5rem;
-	border-color: var(--color007);
+	border-color: var(--color004);
 	border-width: 10px;
 	width: 100%;
 	height: 200px;
@@ -124,12 +164,13 @@ body {
 }
 
 .applicationCardInProgress {
-	background-color: var(--color007);
+	background-color: var(--color004);
 	border-radius: 0.5rem;
-	border-color: var(--color007);
+	border-color: var(--color004);
 	border-width: 10px;
 	width: 100%;
-	height: 250px;
+	height: auto;
+	max-height: 300px;
 	color: var(--color255);
 }
 
@@ -137,16 +178,18 @@ body {
 	width: 100%;
 	text-align: center;
 	overflow: hidden;
-	height: 265px;
+	height: auto;
+	margin-bottom: 15px;
+	max-height: 305px;
 }
 
 .applicationCardMain {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	background-color: var(--color007);
+	background-color: var(--color004);
 	border-radius: 0.5rem;
-	border-color: var(--color007);
+	border-color: var(--color004);
 	border-width: 10px;
 	width: 90vw;
 	height: 200px;
@@ -176,16 +219,25 @@ p {
 	width: 70%;
 }
 
+.dateInfo{
+	display: flex;
+	flex-direction: column;
+	align-items: start;
+}
+
 .applicationHeader div .text {
-	margin: 4% 5vw 4% 5vw;
+	margin: 19px 5vw 14px 5vw;
+	color: var(--color3);
 }
 
 .applicationHeader div .text2 {
-	margin: 3% 5vw 0 5vw;
+	margin: 10px 5vw 0 5vw;
+	color: var(--color3);
 }
 
 .applicationHeader div .text3 {
 	margin: 6% 0 0 0;
+	width: auto;
 }
 
 .smallDate {
@@ -209,15 +261,19 @@ p {
 	justify-content: space-between;
 	width: 100%;
 	min-width: 70%;
-	height: 3.8em;
+	height: 3.5em;
 	text-align: left;
 	color: var(--color3);
+}
+.main {
+	height: 4em !important;
 }
 
 .markButton {
 	display: flex;
 	justify-content: end;
-	width: 100px;
+	width: auto;
+	padding: 17px 0;
 }
 
 a {
@@ -226,16 +282,13 @@ a {
 
 i {
 	color: var(--color255);
-	margin: 6%;
-}
-
-.applicationHeader div i {
-	margin-top: 11%;
+	margin-right: 6%;
+	margin-left: 6%;
 }
 
 .fa-heart-crack,
 .fa-heart {
-	margin-right: 15%;
+	margin-right: 4vw;
 }
 
 .anotherText {
@@ -256,6 +309,12 @@ i {
 .applicationInProgressFooter .btn {
 	border-radius: 0.6rem;
 	min-width: 20vw;
+	height: 32px;
+	padding: 6px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
 }
 
 .fa-times {
@@ -282,10 +341,6 @@ i {
 .form-check-input:checked {
 	background-color: var(--color3);
 	border-color: var(--color3);
-}
-
-.form-check-input:active {
-	filter: drop-shadow();
 }
 
 .form-check-input:focus {
@@ -315,12 +370,13 @@ i {
 
 .application {
 	width: 100%;
+	max-width: 800px;
 	height: 5em;
 	background-color: var(--color506);
 	display: flex;
 	align-items: center;
+	align-self: center;
 	justify-content: space-around;
-	position: relative;
 }
 
 .application .btn {
@@ -343,16 +399,17 @@ i {
 	margin: 1% 3% 1% 3%;
 	border-radius: 0.6rem;
 	border-color: var(--color1);
-	min-width: 35vw;
+	min-width: 10vw;
+	width: 35vw;
 	color: var(--color255);
 }
 
 .mainProfileIcon {
 	background-color: var(--color255);
 	border-radius: 10rem;
-	height: 5vh;
-	width: 5vh;
-	margin: 4% 5vw 3% 4vw;
+	height: 45px;
+	width: 45px;
+	margin: 0.5em 4vw 0.5em 5vw;
 	display: inline-block;
 }
 
@@ -390,8 +447,9 @@ i {
 .oneScroll {
 	min-width: 107%;
 	height: 100%;
-	margin-top: 300px;
+	margin-top: 270px;
 	margin-bottom: 2em;
+	margin-left: -2.5vw;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -401,7 +459,7 @@ i {
 .twoScroll {
 	min-width: 107%;
 	height: 100%;
-	margin-top: 300px;
+	margin-top: 270px;
 	margin-bottom: 2em;
 	display: flex;
 	justify-content: center;
@@ -431,12 +489,18 @@ i {
 	padding-right: 8px;
 }
 
+.heartHouseAlignInfo{
+	margin-top: 3px;
+	margin-right: 5px;
+	margin-left: 0;
+}
+
+
 .click,
 .click_2,
 .click_3,
 .clickInfo {
-	background: none;
-	padding: 5px;
+	background: transparent;
 	font-size: 1.2em;
 	border: none;
 	outline: none;
@@ -446,17 +510,13 @@ i {
 
 .notification {
 	align-items: center;
-	padding: 5px;
-	padding-left: 13px;
-	padding-right: 13px;
+	padding: 5px 13px 5px 13px;
 	width: 50px;
 }
 
 .try {
-	min-width: 80vw;
 	border-radius: 0.5rem;
 	background-color: var(--color255);
-	position: center;
 	margin: 5% 0 5% 0;
 	width: 100%;
 	height: 100%;
@@ -507,32 +567,34 @@ form p {
 }
 
 .links {
-	padding: 3vw;
+	padding: 15px;
 	font-size: 1.0em;
 	border: none;
 	outline: none;
 	height: 60px;
-	width: 56vw;
+	width: 240px;
+	max-width: 350px;
 	transition: 0.3s;
 }
 
-.droppoints {
+.dropPoints {
 	display: none;
 	z-index: 100;
 	position: absolute;
 	border-radius: 0.5rem;
 	background-color: var(--color4095);
 	margin-bottom: 0;
-	margin-left: -50vw;
-	min-width: 10em;
-	min-height: 5em;
-	bottom: 90%;
+	margin-left: -13em;
+	width: 15em;
+	min-width: 13em;
+	height: 5em;
+	bottom: 140%;
 	padding: 0;
 }
 
 .editingApp {
 	margin: 0;
-	width: 60vw;
+	width: 100%;
 	background-color: transparent;
 	border-color: transparent;
 	color: var(--color255);
@@ -545,39 +607,40 @@ form p {
 	color: var(--color255);
 }
 
-.threepoints:hover .droppoints {
+.threePoints:hover .dropPoints {
 	display: block;
 }
 
-.threepoints {
+.threePoints {
 	position: relative;
+	margin-right: 5%;
+	margin-top: -4px;
 }
 
 .mainApplicationList {
-	margin-bottom: 8vh;
+	margin-bottom: 4em;
 }
 
 .list {
 	position: absolute;
 	z-index: 100;
-	margin: 0 0 0 -64vw;
-	padding-left: 9vw;
-	padding-right: 9vw;
+	margin: 5px 0 0 -270px;
+	padding: 10px 30px 10px 30px;
 	transform: scaleY(0);
 	transform-origin: top;
 	transition: 0.3s;
 	border-radius: 0.5rem;
 	background-color: var(--color4095);
-	padding-top: 10px;
-	padding-bottom: 10px;
-	width: 74vw;
+	width: 300px;
 }
 
 .list_2 {
 	position: absolute;
-	margin: 0 0 0 -2vw;
+	margin: 0 0 0 -5px;
 	min-height: 20vh;
-	min-width: 93vw;
+	min-width: 250px;
+	width: 92vw;
+	max-width: 600px;
 	z-index: 100;
 	padding-left: 40%;
 	padding-right: 40%;
@@ -610,7 +673,7 @@ form p {
 	text-align: left;
 }
 
-.helpdiv::-webkit-scrollbar {
+.helpDiv::-webkit-scrollbar {
 	width: 1px;
 }
 
@@ -622,35 +685,36 @@ form p {
 	font-family: sans-serif;
 }
 
-.helpdiv {
+.helpDiv {
 	padding-top: 5%;
 	width: 100%;
 	min-height: 92vh;
 }
 
-.helpdiv section {
+.helpDiv section {
 	min-width: 100%;
 	display: flex;
 	justify-content: center;
 	overflow: auto;
 }
 
-.helpdiv .item {
+.helpDiv .item {
 	width: 90%;
+	max-width: 700px;
 	color: var(--color255);
 }
 
-.helpdiv .items {
+.helpDiv .items {
 	width: 100%;
 	height: auto;
 	margin: 0 0 4% 0;
 	padding: 5%;
 	border-radius: 0.6rem;
-	background-color: var(--color007);
+	background-color: var(--color004);
 }
 
 @media (max-width: 800px) {
-	.helpdiv {
+	.helpDiv {
 		display: flex;
 	}
 }
@@ -704,9 +768,9 @@ form p {
 
 .modal-content hr {
 	color: var(--color255);
-	max-width: 80vw;
-	height: 2.5px;
-	margin: 0 0 0 8vw;
+	max-width: 80%;
+	height: 3px;
+	margin: 0 0 0 10%;
 }
 
 .modal-content span {
@@ -726,29 +790,26 @@ form p {
 	background-color: var(--color1);
 	border-color: var(--color1);
 	width: 35vw;
+	max-width: 200px;
 	color: var(--color255);
 }
 
 .menu hr {
 	color: var(--color255);
-	width: 56vw;
 	height: 3px;
+	width: 100%;
 	margin: 5px 5px 0 0;
 	opacity: .25;
 }
 
-.link1 {
-	border: none;
-}
-
 .links:hover {
-	background-color: rgba(152, 17, 48, 0);
+	background-color: transparent;
 	color: var(--color3);
-	font-style: bold;
+	font-weight: bold;
 	transform: scale(1.01);
 }
 
-.list .dropinfo {
+.list .dropInfo {
 	position: relative;
 	height: 100%;
 	color: var(--color255);
@@ -758,17 +819,12 @@ form p {
 	align-items: center;
 }
 
-.dropwindow:hover .dropinfo {
+.dropwindow:hover .dropInfo {
 	display: block;
 }
 
 .dropwindow:hover .links {
 	flex-direction: revert;
-}
-
-.form_button {
-	font-family: sans-serif;
-	letter-spacing: 1px;
 }
 
 .formButtons {
@@ -780,12 +836,15 @@ form p {
 	border: none;
 	font-size: 15px;
 	background-color: var(--color1);
+	color: var(--color255);
 	text-align: center;
 	border-radius: 0.6em;
 	padding: 1% 2% 1% 2%;
 	display: inline-block;
 	margin: 2% 0 2% 0;
 	width: 45%;
+	font-family: sans-serif;
+	letter-spacing: 1px;
 }
 
 .formButtons a {
@@ -796,13 +855,13 @@ form p {
 	text-decoration: none;
 }
 
-.dropinfo .form-floating {
+.dropInfo .form-floating {
 	margin: 5% 2% 5% 2%;
 	color: var(--color5);
-	width: 54vw;
+	width: 230px;
 }
 
-.dropinfo .form-control {
+.dropInfo .form-control {
 	border-radius: 0.5rem;
 }
 
@@ -855,28 +914,29 @@ form p {
 
 .select_box {
 	border-radius: 0.5rem;
-	height: 7vh;
+	height: 56px;
 	width: 70vw;
 	margin: 1% 15% 1% 15%;
+	padding: 1rem .75rem;
 }
 
 .select_box_change {
 	border-radius: 0.5rem;
-	height: 6vh;
-	width: 54vw;
+	height: 56px;
+	width: 230px;
+	padding: 1rem .75rem;
 	margin: 1% 2% 5% 2%;
 }
 
 .select_box_special {
 	border-radius: 0.4rem;
-	height: 7vh;
+	height: 56px;
 	width: 70vw;
 	margin: 2% 15% 5% 15%;
 }
 
 #progress,
 #progress2 {
-
 	z-index: 1000;
 	width: 25%;
 	background: #00E5FF;
@@ -892,87 +952,63 @@ form p {
 	width: 50%;
 }
 
-.carousel-indicators {
-	position: absolute;
-	right: 0;
-	top: 330px;
-	left: 0;
-	z-index: 2;
-	display: flex;
-	justify-content: center;
-	padding: 0;
-	margin: 3px 0 3px 0;
-	list-style: none;
-	height: 10px;
-}
-
-.carousel-indicators [data-bs-target] {
-    box-sizing: content-box;
-    flex: 0 1 auto;
-    width: 35px;
-    height: 4px;
-    padding: 0;
-    margin-right: 3px; margin-left: 3px;
-    text-indent: -999px;
-    cursor: pointer;
-    background-color: #fff;
-    background-clip: padding-box;
-    border: 0;
-    border-top: 5px solid transparent;
-    border-bottom: 5px solid transparent;
-	border-radius: 0.25rem;
-    opacity: .5;
-    transition: opacity .6s ease;
-}
-
-.logupdiv {
-	width: auto;
+.logUpDiv {
+	width: 200px;
 	height: auto;
-	max-width: 260px;
 	background-color: var(--color255);
 	border-radius: 1.2rem;
-	margin: 1vh 30vw 1vh 30vw;
+	margin: 1vh 15vw 1vh 15vw;
 	display: flex;
 	scroll-snap-type: x mandatory;
 	overflow-x: scroll;
 }
 
-.logupdiv .pic {
-	width: 40vw;
+.logUpDiv .pic {
 	height: auto;
+	width: 200px;
 	margin: 0 0 0 0;
 	display: inline-block;
 	scroll-snap-align: start;
 }
 
-.logupdiv::-webkit-scrollbar {
+.logUpDiv::-webkit-scrollbar {
 	display: none;
 }
 
-.fa-gear:hover,
-.fa-ellipsis:hover,
-.fa-bell:hover,
-.fa-layer:hover,
-.fa-magnifying-glass:hover {
-	color: var(--color6);
-}
-
-.work{
-	margin-top:1px !important;
-	margin-left: 2px !important;
-	color: var(--color1); 
-	font-size: 0.9em;
-}
-
-.bell{
-	font-size: 24px;
-}
 
 .circle{
-	margin-top:-13px !important; 
-	margin-left: 12px !important;
+	margin: 4px 0 0 9px !important;
 	color: var(--color3); 
 	font-size: 0.75em;
+}
+
+.fa,
+.fa-solid {
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-font-smoothing: antialiased;
+	font-style: normal;
+	font-variant: normal;
+	line-height: 1;
+	text-rendering: auto
+}
+
+.fa-xl {
+	font-size: 24px;
+	vertical-align: -.125em
+}
+
+.fa-stack {
+	height: 2em;
+	line-height: 2em;
+	vertical-align: middle;
+	width: 1.7em
+}
+
+.fa-stack-1x,
+.circle {
+	position: absolute;
+	text-align: center;
+	width: 100%;
 }
 
 .form-floating>label {
@@ -1002,7 +1038,7 @@ form p {
 	width: 18vw;
 	align-items: center;
 	border-radius: 0.9rem;
-	padding: 1vh 2.4vh;
+	padding: 0;
 	background-color: var(--color1);
 	border-color: var(--color1);
 	margin: 0 0 0 4%;
@@ -1025,51 +1061,59 @@ form p {
 
 .profileInfo2 {
 	position: relative;
-	min-width: 40vw;
 	height: 80%;
 	margin: 25px 5px 25px 5px;
+	display: flex;
+	align-items: center;
 }
 
-.profileInfo2 p {
+.profileInfo2 div p {
 	color: var(--color255);
 	margin: 5px 0 0 0;
 }
 
 .profilePhotoInfo {
 	position: relative;
-	height: 215px;
+	display: flex;
+	align-items: center;
+	background-color: transparent;
+	height: 214px;
 	width: 164px;
-	background-color: var(--color255);
 	margin: 25px 5px 25px 5px;
 }
 
-.profilePhotoInfo img {
-	width: auto;
-	height: 100%;
+.profilePhotoInfo div{
+	width: 100%;
+	height: auto;
+	background-color: var(--color255);
+}
+
+.profilePhotoInfo div img {
+	width: 100%;
+	height: auto;
 }
 
 .applicationCardInProgressInfo {
-	background-color: var(--color007);
+	background-color: var(--color004);
 	border-radius: 0.5rem;
-	border-color: var(--color007);
+	border-color: var(--color004);
 	border-width: 10px;
 	width: 100%;
-	height: 260px;
+	height: auto;
+	max-height: 300px;
 	color: var(--color255);
 }
 
 .listInfo{
-	margin-right: 7%; margin-left: 7%;
-	padding-left: 9vw;
-	padding-right: 9vw;
+	margin-right: 5%; margin-left: 5%;
+	padding: 10px 30px 10px 30px;
 	border-radius: 0.5rem;
 	background-color: var(--color4095);
-	padding-top: 10px;
-	padding-bottom: 10px;
-	width: 86%;
+	width: 86vw;
+	max-width: 300px;
 }
 
-.listInfo .dropinfo {
+.listInfo .dropInfo {
 	position: relative;
 	height: 100%;
 	color: var(--color255);
@@ -1083,10 +1127,9 @@ form p {
 	text-decoration: none;
 }
 
-.listInfo .dropinfo .form-floating {
+.listInfo .dropInfo .form-floating {
 	margin: 5% 2% 5% 2%;
 	color: var(--color5);
-	width: 56vw;
 }
 
 .notificationInfo{
@@ -1098,12 +1141,13 @@ form p {
 }
 
 .notificationInfo .try {
-	min-width: 50vw;
+	position: relative;
+	min-width: 150px;
 	border-radius: 0.5rem;
 	background-color: var(--color255);
 	margin: 5% 0 5% 0;
 	width: 100%;
-	height: 100%;
+	height: auto;
 	color: var(--color0);
 }
 
@@ -1126,17 +1170,18 @@ form p {
 	border-radius: 0.6rem;
 	border-color: var(--color1);
 	width: 35vw;
-	min-width: 25vw;
+	min-width: 100px;
 	color: var(--color255);
 }
 
 .testInfo .items {
 	width: 100%;
+	max-width: 700px;
 	height: auto;
 	margin: 3% 0 3% 0;
 	padding: 5%;
 	border-radius: 0.6rem;
-	background-color: var(--color007);
+	background-color: var(--color004);
 }
 
 .testInfo .modal-content {
@@ -1144,15 +1189,17 @@ form p {
 	display: flex;
 	flex-direction: column;
 	width: 90vw;
+	max-width: 500px;
 	background-color: var(--color4095);
 	border-radius: 0.7rem;
 }
 
 .testInfo .modal-content hr {
 	color: var(--color255);
-	max-width: 74vw;
-	height: 2.5px;
-	margin: 0 0 0 8vw;
+	min-width: 10px;
+	max-width: 400px;
+	height: 3px;
+	margin: 0 3em 0 3em;
 }
 
 .testInfo {
@@ -1165,6 +1212,13 @@ form p {
 .testInfo h1 {
 	font-size: 30px;
 	margin: 3% 0 3% 0;
+}
+
+.testInfo h2 {
+	font-size: 22px;
+	color: var(--color255);
+	opacity: .8;
+	margin: 1% 0 1% 0;
 }
 
 .testInfo .textInstruction {
@@ -1193,10 +1247,24 @@ form p {
 	background-color: var(--color4095);
 }
 
+.QandA{
+	display: flex;
+	flex-direction: column;
+	margin: 5vw;
+	width: 80vw;
+}
+
 .testInfo .divider {
 	color: var(--color255); 
 	margin: 5%;
 	height: 3px;
+}
+
+.testInfo .divider2 {
+	color: var(--color255);
+	width: 76vw;
+	margin: 2%;
+	height: 2px;
 }
 
 .message{
@@ -1206,4 +1274,82 @@ form p {
 	left: 10%; 
 	width: 80%; 
 	font-size: 1rem;
+}
+
+.logo {
+	height: auto;
+	width: 90vw;
+	max-width: 700px;
+	margin-top: 1em;
+	filter: opacity(.65) var(--filter255);
+}
+
+.hover:hover {
+	filter: var(--filter6);
+}
+
+.highLogo{
+	height: 2.5em;
+	width: auto;
+	filter: opacity(.65) var(--filter255);
+}
+
+.headerControlIcon {
+	height: 27px;
+	width: 27px;
+	filter: var(--filter255);
+}
+
+.bellIcon {
+	height: 27px;
+	width: 30px;
+	filter: var(--filter255);
+}
+
+.controlIcon{
+	height: 24px;
+	width: 27px;
+	filter: var(--filter255);
+}
+
+.cancelIcon{
+	height: 15px;
+	width: 15px;
+	filter: var(--filter5);
+}
+
+.finishIcon {
+	filter: var(--filter1);
+	height: 17px;
+	width: 17px;
+}
+
+.dotsIcon {
+	height: 21px;
+	width: 24px;
+	filter: var(--filter255);
+}
+
+.pointer {
+	color: var(--color6);
+	margin: 5px 0 5px 0;
+	font-size: 14px;
+}
+
+.right{
+	text-align:left;
+}
+
+.left {
+	text-align:right;
+}
+
+.popover{
+	z-index: 100 !important;
+}
+
+.transparentButton {
+	background-color: transparent;
+	border: none;
+	margin:0;
 }
